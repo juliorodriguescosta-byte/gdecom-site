@@ -5,23 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quem somos · GDECOM — Grupo de Desenvolvimento Comunitário</title>
   <meta name="description" content="A história do GDECOM: fundado em 1980 pela força coletiva das Vilas Vietnã, Carioca, Suzana e Primeiro de Maio, em Belo Horizonte.">
+  <link rel="canonical" href="https://www.gdecom.org.br/quem-somos.html">
+  <meta name="theme-color" content="#06357e">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook / Instagram -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://www.gdecom.org.br/quem-somos.html">
+  <meta property="og:site_name" content="GDECOM">
+  <meta property="og:title" content="Quem somos · GDECOM — Grupo de Desenvolvimento Comunitário">
+  <meta property="og:description" content="A história do GDECOM: fundado em 1980 pela força coletiva das Vilas Vietnã, Carioca, Suzana e Primeiro de Maio, em Belo Horizonte.">
+  <meta property="og:image" content="https://www.gdecom.org.br/assets/img/gdecom-02.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quem somos · GDECOM — Grupo de Desenvolvimento Comunitário">
+  <meta name="twitter:description" content="A história do GDECOM: fundado em 1980 pela força coletiva das Vilas Vietnã, Carioca, Suzana e Primeiro de Maio, em Belo Horizonte.">
+  <meta name="twitter:image" content="https://www.gdecom.org.br/assets/img/gdecom-02.jpg">
+
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilo.css">
+
+  <!-- Dados estruturados: página específica com trecho da história como texto principal -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Quem somos — GDECOM",
+    "url": "https://www.gdecom.org.br/quem-somos.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "GDECOM",
+      "url": "https://www.gdecom.org.br/"
+    },
+    "about": {
+      "@type": "NGO",
+      "name": "GDECOM — Grupo de Desenvolvimento Comunitário",
+      "foundingDate": "1980-08-11",
+      "foundingLocation": "Belo Horizonte, MG, Brasil"
+    }
+  }
+  </script>
 </head>
 <body>
+
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="topo">
     <div class="topo-inner">
       <a class="topo-logo" href="index.html" aria-label="GDECOM — página inicial">
-        <img src="assets/img/logo.png" alt="GDECOM — Grupo de Desenvolvimento Comunitário">
+        <img src="assets/img/logo.png" alt="GDECOM — Grupo de Desenvolvimento Comunitário" width="160" height="48">
       </a>
-      <button class="hamburguer" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
-      <nav class="menu" aria-label="Menu principal">
+      <button class="hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">&#9776;</button>
+      <nav class="menu" id="menu-principal" aria-label="Menu principal">
         <a href="index.html">Início</a>
-        <a href="quem-somos.html" class="ativo">Quem somos</a>
+        <a href="quem-somos.html" class="ativo" aria-current="page">Quem somos</a>
         <a href="o-que-fazemos.html">O que fazemos</a>
         <a href="projetos.html">Projetos</a>
         <a href="contato.html" class="menu-cta">Fale com a gente</a>
@@ -29,7 +71,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="conteudo">
     <section class="hero" style="padding-bottom:34px;">
       <div class="container">
         <div class="secao-cabeca surgir">
@@ -70,7 +112,7 @@
           </p>
         </div>
         <div class="duo-foto surgir">
-          <img src="assets/img/gdecom-02.jpg" alt="Peça do GDECOM contando a origem da organização">
+          <img src="assets/img/gdecom-02.jpg" alt="Peça do GDECOM contando a origem da organização" width="560" height="420" loading="lazy" decoding="async">
           <span class="selo">Desde 11 de agosto de 1980</span>
         </div>
       </div>
@@ -83,7 +125,7 @@
           <span class="pill">Caminhada</span>
           <h2>Mais de quatro décadas de <span class="mancha">promoção social</span></h2>
         </div>
-        <ul class="tempo surgir">
+        <ol class="tempo surgir">
           <li>
             <strong>Década de 1980 — a necessidade</strong>
             Famílias das Vilas Vietnã, Carioca, Suzana e Primeiro de Maio precisavam
@@ -105,7 +147,7 @@
             socioassistenciais, projetos culturais e campanhas de cidadania — sempre
             com a comunidade no centro das decisões.
           </li>
-        </ul>
+        </ol>
       </div>
     </section>
 
@@ -120,22 +162,22 @@
         </div>
         <div class="valores">
           <div class="valor surgir">
-            <h3><svg viewBox="0 0 24 24" fill="#f2c200" stroke="#06357e" stroke-width="1.4" aria-hidden="true"><path d="M12 2l2.6 6.2 6.7.5-5.1 4.4 1.6 6.6L12 16.3 6.2 19.7l1.6-6.6-5.1-4.4 6.7-.5z"/></svg> Promoção social</h3>
+            <h3><svg viewBox="0 0 24 24" fill="#f2c200" stroke="#06357e" stroke-width="1.4" aria-hidden="true" focusable="false"><path d="M12 2l2.6 6.2 6.7.5-5.1 4.4 1.6 6.6L12 16.3 6.2 19.7l1.6-6.6-5.1-4.4 6.7-.5z"/></svg> Promoção social</h3>
             <p>Nosso objetivo central: promover o desenvolvimento de pessoas e da
                comunidade, com dignidade e oportunidade.</p>
           </div>
           <div class="valor surgir">
-            <h3><svg viewBox="0 0 24 24" fill="#f2c200" stroke="#06357e" stroke-width="1.4" aria-hidden="true"><path d="M12 2l2.6 6.2 6.7.5-5.1 4.4 1.6 6.6L12 16.3 6.2 19.7l1.6-6.6-5.1-4.4 6.7-.5z"/></svg> União e solidariedade</h3>
+            <h3><svg viewBox="0 0 24 24" fill="#f2c200" stroke="#06357e" stroke-width="1.4" aria-hidden="true" focusable="false"><path d="M12 2l2.6 6.2 6.7.5-5.1 4.4 1.6 6.6L12 16.3 6.2 19.7l1.6-6.6-5.1-4.4 6.7-.5z"/></svg> União e solidariedade</h3>
             <p>Os mesmos valores que fundaram o GDECOM em 1980 guiam cada atividade
                até hoje.</p>
           </div>
           <div class="valor surgir">
-            <h3><svg viewBox="0 0 24 24" fill="#f2c200" stroke="#06357e" stroke-width="1.4" aria-hidden="true"><path d="M12 2l2.6 6.2 6.7.5-5.1 4.4 1.6 6.6L12 16.3 6.2 19.7l1.6-6.6-5.1-4.4 6.7-.5z"/></svg> Participação comunitária</h3>
+            <h3><svg viewBox="0 0 24 24" fill="#f2c200" stroke="#06357e" stroke-width="1.4" aria-hidden="true" focusable="false"><path d="M12 2l2.6 6.2 6.7.5-5.1 4.4 1.6 6.6L12 16.3 6.2 19.7l1.6-6.6-5.1-4.4 6.7-.5z"/></svg> Participação comunitária</h3>
             <p>A comunidade participa ativamente da definição das prioridades — o
                GDECOM é feito com ela, não apenas para ela.</p>
           </div>
           <div class="valor surgir">
-            <h3><svg viewBox="0 0 24 24" fill="#f2c200" stroke="#06357e" stroke-width="1.4" aria-hidden="true"><path d="M12 2l2.6 6.2 6.7.5-5.1 4.4 1.6 6.6L12 16.3 6.2 19.7l1.6-6.6-5.1-4.4 6.7-.5z"/></svg> Vínculos que protegem</h3>
+            <h3><svg viewBox="0 0 24 24" fill="#f2c200" stroke="#06357e" stroke-width="1.4" aria-hidden="true" focusable="false"><path d="M12 2l2.6 6.2 6.7.5-5.1 4.4 1.6 6.6L12 16.3 6.2 19.7l1.6-6.6-5.1-4.4 6.7-.5z"/></svg> Vínculos que protegem</h3>
             <p>Acreditamos que fortalecer vínculos é fortalecer vidas — entre
                pessoas, famílias e território.</p>
           </div>
@@ -160,11 +202,11 @@
     <div class="container">
       <div class="rodape-grid">
         <div>
-          <span class="rodape-logo"><img src="assets/img/logo.png" alt="GDECOM"></span>
+          <span class="rodape-logo"><img src="assets/img/logo.png" alt="GDECOM" width="120" height="36" loading="lazy"></span>
           <p>Grupo de Desenvolvimento Comunitário — Organização da Sociedade Civil
              dedicada à promoção social desde 1980.</p>
         </div>
-        <div>
+        <nav aria-label="Links do rodapé">
           <h4>Navegue</h4>
           <ul>
             <li><a href="index.html">Início</a></li>
@@ -173,16 +215,18 @@
             <li><a href="projetos.html">Projetos</a></li>
             <li><a href="contato.html">Contato</a></li>
           </ul>
-        </div>
+        </nav>
         <div>
           <h4>Onde estamos</h4>
-          <ul>
-            <li>Rua Cajuí, 100 — Bairro Suzana</li>
-            <li>Belo Horizonte / MG — CEP 31260-480</li>
-            <li>Tel.: (31) 3497-7255</li>
-            <li><a href="mailto:gdecom@gdecom.org.br">gdecom@gdecom.org.br</a></li>
-            <li><a href="https://www.instagram.com/gdecom/" target="_blank" rel="noopener">@gdecom</a></li>
-          </ul>
+          <address style="font-style: normal;">
+            <ul>
+              <li>Rua Cajuí, 100 — Bairro Suzana</li>
+              <li>Belo Horizonte / MG — CEP 31260-480</li>
+              <li><a href="tel:+553134977255">Tel.: (31) 3497-7255</a></li>
+              <li><a href="mailto:gdecom@gdecom.org.br">gdecom@gdecom.org.br</a></li>
+              <li><a href="https://www.instagram.com/gdecom/" target="_blank" rel="noopener noreferrer">@gdecom <span class="sr-only">(abre em nova aba)</span></a></li>
+            </ul>
+          </address>
         </div>
       </div>
       <div class="rodape-base">
