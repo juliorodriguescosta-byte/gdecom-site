@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quem somos · GDECOM — Grupo de Desenvolvimento Comunitário</title>
-  <meta name="description" content="A história do GDECOM: fundado em 1980 pela força coletiva das Vilas Vietnã, Carioca, Suzana e Primeiro de Maio, em Belo Horizonte.">
-  <link rel="canonical" href="https://www.gdecom.org.br/quem-somos.html">
+  <title>GDECOM — Grupo de Desenvolvimento Comunitário | Belo Horizonte</title>
+  <meta name="description" content="Desde 1980, o GDECOM promove desenvolvimento social com crianças, adolescentes, jovens e famílias em Belo Horizonte. Conheça nossa história, programas e projetos.">
+  <link rel="canonical" href="https://www.gdecom.org.br/">
   <meta name="theme-color" content="#06357e">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph / Facebook / Instagram -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:url" content="https://www.gdecom.org.br/quem-somos.html">
+  <meta property="og:url" content="https://www.gdecom.org.br/">
   <meta property="og:site_name" content="GDECOM">
-  <meta property="og:title" content="Quem somos · GDECOM — Grupo de Desenvolvimento Comunitário">
-  <meta property="og:description" content="A história do GDECOM: fundado em 1980 pela força coletiva das Vilas Vietnã, Carioca, Suzana e Primeiro de Maio, em Belo Horizonte.">
-  <meta property="og:image" content="https://www.gdecom.org.br/assets/img/gdecom-02.jpg">
+  <meta property="og:title" content="GDECOM — Grupo de Desenvolvimento Comunitário | Belo Horizonte">
+  <meta property="og:description" content="Desde 1980, o GDECOM promove desenvolvimento social com crianças, adolescentes, jovens e famílias em Belo Horizonte. Conheça nossa história, programas e projetos.">
+  <meta property="og:image" content="https://www.gdecom.org.br/assets/img/gdecom-03.jpg">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Quem somos · GDECOM — Grupo de Desenvolvimento Comunitário">
-  <meta name="twitter:description" content="A história do GDECOM: fundado em 1980 pela força coletiva das Vilas Vietnã, Carioca, Suzana e Primeiro de Maio, em Belo Horizonte.">
-  <meta name="twitter:image" content="https://www.gdecom.org.br/assets/img/gdecom-02.jpg">
+  <meta name="twitter:title" content="GDECOM — Grupo de Desenvolvimento Comunitário | Belo Horizonte">
+  <meta name="twitter:description" content="Desde 1980, o GDECOM promove desenvolvimento social com crianças, adolescentes, jovens e famílias em Belo Horizonte.">
+  <meta name="twitter:image" content="https://www.gdecom.org.br/assets/img/gdecom-03.jpg">
 
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,23 +30,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilo.css">
 
-  <!-- Dados estruturados: página específica com trecho da história como texto principal -->
+  <!-- Dados estruturados: ajuda o Google a exibir o GDECOM como organização (endereço, telefone, redes sociais) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "Quem somos — GDECOM",
-    "url": "https://www.gdecom.org.br/quem-somos.html",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "GDECOM",
-      "url": "https://www.gdecom.org.br/"
-    },
-    "about": {
-      "@type": "NGO",
-      "name": "GDECOM — Grupo de Desenvolvimento Comunitário",
-      "foundingDate": "1980-08-11",
-      "foundingLocation": "Belo Horizonte, MG, Brasil"
+    "@type": "NGO",
+    "name": "GDECOM — Grupo de Desenvolvimento Comunitário",
+    "url": "https://www.gdecom.org.br/",
+    "logo": "https://www.gdecom.org.br/assets/img/logo.png",
+    "foundingDate": "1980",
+    "email": "gdecom@gdecom.org.br",
+    "telephone": "+55-31-3497-7255",
+    "sameAs": ["https://www.instagram.com/gdecom/"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Cajuí, 100 — Bairro Suzana",
+      "addressLocality": "Belo Horizonte",
+      "addressRegion": "MG",
+      "postalCode": "31260-480",
+      "addressCountry": "BR"
     }
   }
   </script>
@@ -60,10 +62,12 @@
       <a class="topo-logo" href="index.html" aria-label="GDECOM — página inicial">
         <img src="assets/img/logo.png" alt="GDECOM — Grupo de Desenvolvimento Comunitário" width="160" height="48">
       </a>
+
       <button class="hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">&#9776;</button>
+
       <nav class="menu" id="menu-principal" aria-label="Menu principal">
-        <a href="index.html">Início</a>
-        <a href="quem-somos.html" class="ativo" aria-current="page">Quem somos</a>
+        <a href="index.html" class="ativo" aria-current="page">Início</a>
+        <a href="quem-somos.html">Quem somos</a>
         <a href="o-que-fazemos.html">O que fazemos</a>
         <a href="projetos.html">Projetos</a>
         <a href="contato.html" class="menu-cta">Fale com a gente</a>
@@ -72,115 +76,126 @@
   </header>
 
   <main id="conteudo">
-    <section class="hero" style="padding-bottom:34px;">
+    <!-- HERO -->
+    <section class="hero">
+      <svg class="telhado-riscado" viewBox="0 0 340 150" fill="none" aria-hidden="true" focusable="false">
+        <path d="M10 130 L200 20 L330 95" stroke="#a9c2cf" stroke-width="7" stroke-linecap="round"/>
+        <path d="M255 52 L255 20 L285 20 L285 70" stroke="#a9c2cf" stroke-width="7" stroke-linecap="round"/>
+      </svg>
+      <div class="container hero-grid">
+        <div class="surgir">
+          <span class="pill">
+            <svg viewBox="0 0 24 24" fill="#f2c200" stroke="#06357e" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M12 2l2.6 6.2 6.7.5-5.1 4.4 1.6 6.6L12 16.3 6.2 19.7l1.6-6.6-5.1-4.4 6.7-.5z"/></svg>
+            Desde 1980 em Belo Horizonte
+          </span>
+          <h1>Desenvolvimento que nasce da <span class="mancha">comunidade</span>.</h1>
+          <p class="grande">
+            O GDECOM é uma Organização da Sociedade Civil que promove desenvolvimento
+            social com crianças, adolescentes, jovens e suas famílias — construído
+            pela própria comunidade, há mais de quatro décadas.
+          </p>
+          <div class="hero-acoes">
+            <a class="btn btn-amarelo" href="quem-somos.html">Conheça nossa história</a>
+            <a class="btn btn-contorno" href="o-que-fazemos.html">O que fazemos</a>
+          </div>
+        </div>
+        <div class="hero-foto surgir">
+          <div class="blob" aria-hidden="true"></div>
+          <img src="assets/img/img-voce-sabia.jpg" alt="Crianças e jovens participando de atividades do GDECOM" width="480" height="480" fetchpriority="high">
+          <svg class="estrela-solta" style="top:-18px; left:-14px;" viewBox="0 0 24 24" fill="#f2c200" stroke="#06357e" stroke-width="1.2" aria-hidden="true" focusable="false"><path d="M12 2l2.6 6.2 6.7.5-5.1 4.4 1.6 6.6L12 16.3 6.2 19.7l1.6-6.6-5.1-4.4 6.7-.5z"/></svg>
+          <svg class="estrela-solta" style="bottom:6px; right:-10px; width:38px; animation-delay:1.2s;" viewBox="0 0 24 24" fill="#f2c200" stroke="#06357e" stroke-width="1.2" aria-hidden="true" focusable="false"><path d="M12 2l2.6 6.2 6.7.5-5.1 4.4 1.6 6.6L12 16.3 6.2 19.7l1.6-6.6-5.1-4.4 6.7-.5z"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- NÚMEROS -->
+    <section class="secao secao-gelo" aria-label="GDECOM em números">
       <div class="container">
-        <div class="secao-cabeca surgir">
-          <span class="pill">Quem somos</span>
-          <h1 style="font-size:clamp(2.2rem,4.6vw,3.3rem); margin:16px 0 14px;">
-            Uma organização feita pela <span class="mancha">força coletiva</span>
-          </h1>
-          <p style="font-size:1.14rem;">
-            O Grupo de Desenvolvimento Comunitário — GDECOM é uma Organização da
-            Sociedade Civil de Belo Horizonte que tem como objetivo a promoção social.
-            Desde a fundação, desenvolve programas e atividades para crianças,
-            adolescentes, jovens e suas famílias, com participação ativa da
-            comunidade na definição das prioridades.
-          </p>
+        <div class="numeros surgir">
+          <div class="numero-card"><strong>1980</strong><span>ano de fundação, pela própria comunidade</span></div>
+          <div class="numero-card"><strong>4</strong><span>vilas na origem: Vietnã, Carioca, Suzana e Primeiro de Maio</span></div>
+          <div class="numero-card"><strong>45+</strong><span>anos de trabalho social contínuo</span></div>
+          <div class="numero-card"><strong>100%</strong><span>participação comunitária nas prioridades</span></div>
         </div>
       </div>
     </section>
 
-    <!-- HISTÓRIA -->
-    <section class="secao secao-creme">
-      <div class="container duo">
-        <div class="duo-texto surgir">
-          <span class="pill">Nossa história</span>
-          <h2>Você sabe a origem do <span class="mancha">GDECOM</span>?</h2>
-          <p>
-            O GDECOM nasceu da força coletiva e da necessidade real das comunidades
-            das <strong>Vilas Vietnã, Carioca, Suzana e Primeiro de Maio</strong>.
-          </p>
-          <p>
-            Na década de 1980, as famílias dessas regiões enfrentavam um desafio
-            comum: a falta de espaços seguros onde trabalhadores e trabalhadoras
-            pudessem deixar seus filhos enquanto buscavam seu sustento.
-          </p>
-          <p>
-            A própria comunidade resolveu agir para mudar aquela realidade. A partir
-            da união, da solidariedade e da mobilização de recursos próprios, os
-            moradores fundaram os alicerces do que hoje é o GDECOM.
-          </p>
-        </div>
-        <div class="duo-foto surgir">
-          <img src="assets/img/gdecom-02.jpg" alt="Peça do GDECOM contando a origem da organização" width="560" height="420" loading="lazy" decoding="async">
-          <span class="selo">Desde 11 de agosto de 1980</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- LINHA DO TEMPO -->
+    <!-- O QUE FAZEMOS (resumo) -->
     <section class="secao">
       <div class="container">
-        <div class="secao-cabeca surgir">
-          <span class="pill">Caminhada</span>
-          <h2>Mais de quatro décadas de <span class="mancha">promoção social</span></h2>
+        <div class="secao-cabeca centro surgir">
+          <span class="pill">Nossas frentes</span>
+          <h2>O que fazemos pela <span class="mancha">nossa gente</span></h2>
+          <p>Programas e atividades para crianças, adolescentes, jovens e famílias —
+             sempre com a comunidade participando das decisões.</p>
         </div>
-        <ol class="tempo surgir">
-          <li>
-            <strong>Década de 1980 — a necessidade</strong>
-            Famílias das Vilas Vietnã, Carioca, Suzana e Primeiro de Maio precisavam
-            de espaços seguros para as crianças enquanto trabalhavam.
-          </li>
-          <li>
-            <strong>11 de agosto de 1980 — a fundação</strong>
-            Com união, solidariedade e recursos próprios, os moradores fundam o
-            Grupo de Desenvolvimento Comunitário.
-          </li>
-          <li>
-            <strong>Ao longo dos anos — o crescimento</strong>
-            O trabalho com crianças se amplia para adolescentes, jovens e famílias:
-            convivência, educação, saúde, cultura e qualificação profissional.
-          </li>
-          <li>
-            <strong>Hoje — a continuidade</strong>
-            O GDECOM segue na Rua Cajuí, 100 (Bairro Suzana), realizando serviços
-            socioassistenciais, projetos culturais e campanhas de cidadania — sempre
-            com a comunidade no centro das decisões.
-          </li>
-        </ol>
+        <div class="cards">
+          <article class="card surgir">
+            <div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 8a5 5 0 1 0-10 0"/><circle cx="7" cy="12" r="3"/><circle cx="17" cy="12" r="3"/><path d="M2 21c0-2.8 2.2-5 5-5s5 2.2 5 5M12 21c0-2.8 2.2-5 5-5s5 2.2 5 5"/></svg></div>
+            <h3>Convivência e vínculos</h3>
+            <p>Serviço de Convivência e Fortalecimento de Vínculos (SCFV): grupos e
+               atividades que fortalecem laços entre pessoas, famílias e comunidade.</p>
+            <a class="link-seta" href="o-que-fazemos.html">Saiba mais sobre convivência e vínculos &rarr;</a>
+          </article>
+          <article class="card surgir">
+            <div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+            <h3>Qualificação profissional</h3>
+            <p>Cursos gratuitos de qualificação para ampliar o acesso ao trabalho e à
+               renda, em parceria com o poder público.</p>
+            <a class="link-seta" href="o-que-fazemos.html">Saiba mais sobre qualificação profissional &rarr;</a>
+          </article>
+          <article class="card surgir">
+            <div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+            <h3>Cultura e juventude</h3>
+            <p>Projetos como o Conecsons e o Verso Vivo aproximam jovens da música,
+               da arte e da produção cultural.</p>
+            <a class="link-seta" href="o-que-fazemos.html">Saiba mais sobre cultura e juventude &rarr;</a>
+          </article>
+          <article class="card surgir">
+            <div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-4.6-9.5-9A5.6 5.6 0 0 1 12 6.4 5.6 5.6 0 0 1 21.5 12C19 16.4 12 21 12 21z"/></svg></div>
+            <h3>Cidadania e direitos</h3>
+            <p>Campanhas de conscientização — como Agosto Lilás e Julho das Pretas —
+               que defendem direitos e dão voz à comunidade.</p>
+            <a class="link-seta" href="projetos.html">Ver campanhas de cidadania e direitos &rarr;</a>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- MISSÃO E VALORES -->
-    <section class="secao secao-gelo">
-      <div class="container">
-        <div class="secao-cabeca centro surgir">
-          <span class="pill">O que nos move</span>
-          <h2>Missão e <span class="mancha">valores</span></h2>
-          <p>“O GDECOM nasceu de um sonho e uma necessidade coletiva — daí vem a força
-             de ser Desenvolvimento Comunitário.”</p>
+    <!-- HISTÓRIA RESUMIDA -->
+    <section class="secao secao-creme">
+      <div class="container duo">
+        <div class="duo-foto surgir">
+          <img src="assets/img/gdecom-03.jpg" alt="Crianças pintando em atividade do GDECOM" width="560" height="420" loading="lazy" decoding="async">
+          <span class="selo">Nasceu de um sonho coletivo</span>
         </div>
-        <div class="valores">
-          <div class="valor surgir">
-            <h3><svg viewBox="0 0 24 24" fill="#f2c200" stroke="#06357e" stroke-width="1.4" aria-hidden="true" focusable="false"><path d="M12 2l2.6 6.2 6.7.5-5.1 4.4 1.6 6.6L12 16.3 6.2 19.7l1.6-6.6-5.1-4.4 6.7-.5z"/></svg> Promoção social</h3>
-            <p>Nosso objetivo central: promover o desenvolvimento de pessoas e da
-               comunidade, com dignidade e oportunidade.</p>
+        <div class="duo-texto surgir">
+          <span class="pill">Nossa origem</span>
+          <h2>Uma história escrita a <span class="mancha">muitas mãos</span></h2>
+          <p>
+            Na década de 1980, as famílias das Vilas Vietnã, Carioca, Suzana e
+            Primeiro de Maio enfrentavam um desafio comum: a falta de espaços seguros
+            onde trabalhadores e trabalhadoras pudessem deixar seus filhos enquanto
+            buscavam seu sustento.
+          </p>
+          <p>
+            A própria comunidade resolveu agir. A partir da união, da solidariedade e
+            da mobilização de recursos próprios, os moradores fundaram os alicerces
+            do que hoje é o GDECOM.
+          </p>
+          <div class="hero-acoes">
+            <a class="btn btn-azul" href="quem-somos.html">Ler a história completa</a>
           </div>
-          <div class="valor surgir">
-            <h3><svg viewBox="0 0 24 24" fill="#f2c200" stroke="#06357e" stroke-width="1.4" aria-hidden="true" focusable="false"><path d="M12 2l2.6 6.2 6.7.5-5.1 4.4 1.6 6.6L12 16.3 6.2 19.7l1.6-6.6-5.1-4.4 6.7-.5z"/></svg> União e solidariedade</h3>
-            <p>Os mesmos valores que fundaram o GDECOM em 1980 guiam cada atividade
-               até hoje.</p>
-          </div>
-          <div class="valor surgir">
-            <h3><svg viewBox="0 0 24 24" fill="#f2c200" stroke="#06357e" stroke-width="1.4" aria-hidden="true" focusable="false"><path d="M12 2l2.6 6.2 6.7.5-5.1 4.4 1.6 6.6L12 16.3 6.2 19.7l1.6-6.6-5.1-4.4 6.7-.5z"/></svg> Participação comunitária</h3>
-            <p>A comunidade participa ativamente da definição das prioridades — o
-               GDECOM é feito com ela, não apenas para ela.</p>
-          </div>
-          <div class="valor surgir">
-            <h3><svg viewBox="0 0 24 24" fill="#f2c200" stroke="#06357e" stroke-width="1.4" aria-hidden="true" focusable="false"><path d="M12 2l2.6 6.2 6.7.5-5.1 4.4 1.6 6.6L12 16.3 6.2 19.7l1.6-6.6-5.1-4.4 6.7-.5z"/></svg> Vínculos que protegem</h3>
-            <p>Acreditamos que fortalecer vínculos é fortalecer vidas — entre
-               pessoas, famílias e território.</p>
-          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CITAÇÃO -->
+    <section class="secao">
+      <div class="container">
+        <div class="citacao surgir">
+          <blockquote>&ldquo;Fortalecer vínculos é fortalecer vidas.&rdquo;</blockquote>
+          — Lema do trabalho social do GDECOM
         </div>
       </div>
     </section>
@@ -188,12 +203,12 @@
     <!-- FAIXA CTA -->
     <section class="faixa">
       <div class="container faixa-inner surgir">
-        <h2>Quer conhecer de perto?</h2>
-        <p>Visite a nossa sede no Bairro Suzana ou acompanhe o dia a dia dos projetos
-           no Instagram.</p>
-        <a class="btn btn-azul" href="contato.html">Ver endereço e contatos</a>
+        <h2>Cola com a gente!</h2>
+        <p>Quer conhecer os projetos, participar das atividades ou apoiar o GDECOM?
+           A porta está sempre aberta para a comunidade.</p>
+        <a class="btn btn-azul" href="contato.html">Fale com a gente</a>
         &nbsp;
-        <a class="btn btn-branco" href="o-que-fazemos.html">Conhecer os programas</a>
+        <a class="btn btn-branco" href="https://www.instagram.com/gdecom/" target="_blank" rel="noopener noreferrer">Siga no Instagram <span class="sr-only">(abre em nova aba)</span></a>
       </div>
     </section>
   </main>
