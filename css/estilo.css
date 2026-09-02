@@ -194,6 +194,7 @@ h1, h2, h3, h4 {
 /* banner largo do hero (imagem panorâmica, sem a moldura orgânica) */
 .hero-foto-banner { max-width: 1040px; }
 .hero-foto-banner img {
+  height: auto;
   aspect-ratio: 16 / 9;
   border-radius: var(--raio);
 }
