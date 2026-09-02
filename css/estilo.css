@@ -295,6 +295,12 @@ h1, h2, h3, h4 {
   margin: 18px 0 0;
 }
 
+/* ---------- história completa (texto longo) ---------- */
+.historia-longa { max-width: 760px; margin: 0 auto; }
+.historia-longa h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-bottom: 22px; }
+.historia-longa p { margin-bottom: 18px; }
+.historia-longa p:last-child { margin-bottom: 0; }
+
 /* ---------- aviso de conteúdo em construção ---------- */
 .aviso-conteudo {
   max-width: 46rem;
