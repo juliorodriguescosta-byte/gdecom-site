@@ -202,6 +202,30 @@ h1, h2, h3, h4 {
   50% { transform: translateY(-12px) rotate(6deg); }
 }
 
+/* ---------- você sabia (destaque de texto) ---------- */
+.secao-voce-sabia { padding: 0 0 78px; }
+.voce-sabia-caixa {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--azul);
+  border: 3px solid var(--amarelo);
+  border-radius: 32px;
+  padding: 36px 40px;
+  box-shadow: var(--sombra);
+}
+.voce-sabia-caixa .pill-clara {
+  background: var(--amarelo);
+  border-color: var(--amarelo);
+}
+.voce-sabia-caixa p {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.12rem;
+  line-height: 1.55;
+  margin: 18px 0 0;
+}
+
 /* telhado decorativo (traço da casa da logo) */
 .telhado-riscado {
   position: absolute;
