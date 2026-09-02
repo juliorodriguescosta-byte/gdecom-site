@@ -15,6 +15,17 @@
     });
   }
 
+  // submenu do menu principal (toque no mobile; hover já funciona via CSS)
+  document.querySelectorAll(".submenu-toggle").forEach(function (toggle) {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var submenu = toggle.closest(".menu-dropdown").querySelector(".submenu");
+      var aberto = submenu.classList.toggle("aberto");
+      toggle.setAttribute("aria-expanded", aberto ? "true" : "false");
+    });
+  });
+
   // animação de entrada ao rolar
   var observador = new IntersectionObserver(function (entradas) {
     entradas.forEach(function (en) {

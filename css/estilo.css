@@ -136,6 +136,67 @@ h1, h2, h3, h4 {
 .menu .menu-cta { background: var(--azul); color: #fff; margin-left: 6px; }
 .menu .menu-cta:hover { background: var(--azul-vivo); }
 
+/* ---------- submenu (dropdown) do menu principal ---------- */
+.menu-dropdown { position: relative; }
+.menu-dropdown-linha { display: flex; align-items: center; }
+.menu-dropdown-linha > .seta {
+  width: 9px;
+  height: 9px;
+  margin-left: -6px;
+  border: none;
+  border-bottom: 2px solid var(--azul);
+  border-right: 2px solid var(--azul);
+  transform: rotate(45deg);
+  transition: transform .15s ease;
+  pointer-events: none;
+}
+.submenu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 9px;
+  cursor: pointer;
+}
+.submenu-toggle .seta {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border: none;
+  border-bottom: 2px solid var(--azul);
+  border-right: 2px solid var(--azul);
+  transform: rotate(45deg);
+  transition: transform .15s ease;
+}
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 70;
+  display: none;
+  flex-direction: column;
+  min-width: 240px;
+  margin-top: 6px;
+  padding: 8px;
+  background: #fff;
+  border: 2px solid var(--amarelo);
+  border-radius: 16px;
+  box-shadow: var(--sombra);
+}
+.menu-dropdown:hover .submenu,
+.menu-dropdown:focus-within .submenu {
+  display: flex;
+}
+.menu-dropdown:hover .menu-dropdown-linha > .seta,
+.menu-dropdown:focus-within .menu-dropdown-linha > .seta {
+  transform: rotate(225deg);
+}
+.submenu a {
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: .94rem;
+  white-space: nowrap;
+}
+
 .hamburguer {
   display: none;
   background: none;
@@ -233,6 +294,17 @@ h1, h2, h3, h4 {
   line-height: 1.55;
   margin: 18px 0 0;
 }
+
+/* ---------- aviso de conteúdo em construção ---------- */
+.aviso-conteudo {
+  max-width: 46rem;
+  background: var(--amarelo-suave);
+  border: 2px dashed var(--amarelo-forte);
+  border-radius: var(--raio);
+  padding: 22px 26px;
+  color: var(--tinta);
+}
+.aviso-conteudo strong { color: var(--azul); }
 
 /* telhado decorativo (traço da casa da logo) */
 .telhado-riscado {
@@ -602,6 +674,21 @@ h1, h2, h3, h4 {
   .menu.aberto { display: flex; }
   .menu a { text-align: center; }
   .hamburguer { display: block; }
+
+  .menu-dropdown-linha { justify-content: space-between; }
+  .menu-dropdown-linha > .seta { display: none; }
+  .menu-dropdown-linha > a { flex: 1; }
+  .submenu-toggle { display: flex; align-items: center; justify-content: center; }
+  .submenu-toggle[aria-expanded="true"] .seta { transform: rotate(225deg); }
+  .submenu {
+    position: static;
+    display: none;
+    margin: 0 0 6px;
+    box-shadow: none;
+    border-style: dashed;
+  }
+  .submenu.aberto { display: flex; }
+  .submenu a { text-align: center; }
 }
 @media (max-width: 520px) {
   .numeros { grid-template-columns: 1fr 1fr; }
