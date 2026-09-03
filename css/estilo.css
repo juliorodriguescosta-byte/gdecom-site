@@ -523,6 +523,22 @@ h1, h2, h3, h4 {
 .programa li { margin-bottom: 6px; }
 .divisor-programas { border: none; border-top: 3px dashed var(--telhado); margin: 64px 0; }
 
+/* ---------- SCFV: galeria de peças gráficas ---------- */
+.scfv-galeria {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 36px;
+}
+.scfv-galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--raio);
+  border: 5px solid #fff;
+  box-shadow: var(--sombra);
+}
+
 /* ---------- galeria ---------- */
 .galeria { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
 .galeria figure {
@@ -661,6 +677,7 @@ h1, h2, h3, h4 {
 @media (max-width: 900px) {
   .hero-grid, .duo, .programa, .contato-grid { grid-template-columns: 1fr; }
   .duo.invertido .duo-foto, .programa.par .programa-foto { order: 0; }
+  .scfv-galeria { grid-template-columns: 1fr; gap: 18px; }
   .numeros { grid-template-columns: repeat(2, 1fr); }
   .rodape-grid { grid-template-columns: 1fr; }
   .hero { padding: 46px 0 64px; }
