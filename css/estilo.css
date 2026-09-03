@@ -99,6 +99,22 @@ h1, h2, h3, h4 {
 .btn-contorno:hover { background: var(--azul); color: #fff; }
 .btn-branco { background: #fff; color: var(--azul); box-shadow: var(--sombra); }
 
+/* ---------- link "pular para o conteúdo" (acessibilidade) ---------- */
+/* fica invisível fora da tela; só aparece quando alguém navega pelo teclado (Tab) */
+.pular-conteudo {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  color: var(--azul);
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 0 0 10px 0;
+  box-shadow: var(--sombra);
+}
+.pular-conteudo:focus { left: 0; }
+
 /* ============================================================
    CABEÇALHO
    ============================================================ */
