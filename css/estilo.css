@@ -300,6 +300,8 @@ h1, h2, h3, h4 {
 .historia-longa h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-bottom: 22px; }
 .historia-longa p { margin-bottom: 18px; }
 .historia-longa p:last-child { margin-bottom: 0; }
+.historia-longa ul { margin: 0 0 18px 1.2rem; }
+.historia-longa li { margin-bottom: 6px; }
 
 /* ---------- aviso de conteúdo em construção ---------- */
 .aviso-conteudo {
