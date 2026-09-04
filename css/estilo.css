@@ -136,8 +136,7 @@ h1, h2, h3, h4 {
   position: sticky;
   top: 0;
   z-index: 60;
-  background: rgba(255, 255, 255, .94);
-  backdrop-filter: blur(8px);
+  background: var(--azul);
   border-bottom: 3px solid var(--amarelo);
 }
 .topo-inner {
@@ -149,22 +148,29 @@ h1, h2, h3, h4 {
   max-width: 1180px;
   margin: 0 auto;
 }
+.topo-logo {
+  background: #fff;
+  border-radius: 12px;
+  padding: 4px 12px;
+  display: inline-flex;
+  align-items: center;
+}
 .topo-logo img { height: 54px; width: auto; }
 .menu { display: flex; align-items: center; gap: 6px; }
 .menu a {
   font-family: var(--fonte-display);
   font-weight: 700;
   font-size: .98rem;
-  color: var(--azul);
+  color: #fff;
   padding: 9px 14px;
   border-radius: 999px;
   text-decoration: none;
-  transition: background .15s ease;
+  transition: background .15s ease, color .15s ease;
 }
-.menu a:hover { background: var(--amarelo-suave); text-decoration: none; }
+.menu a:hover { background: var(--amarelo-suave); color: var(--azul); text-decoration: none; }
 .menu a.ativo { background: var(--amarelo); color: var(--azul); }
-.menu .menu-cta { background: var(--azul); color: #fff; margin-left: 6px; }
-.menu .menu-cta:hover { background: var(--azul-vivo); }
+.menu .menu-cta { background: var(--amarelo); color: var(--azul); margin-left: 6px; }
+.menu .menu-cta:hover { background: #ffd21a; }
 
 /* ---------- submenu (dropdown) do menu principal ---------- */
 .menu-dropdown { position: relative; }
@@ -174,8 +180,8 @@ h1, h2, h3, h4 {
   height: 9px;
   margin-left: -6px;
   border: none;
-  border-bottom: 2px solid var(--azul);
-  border-right: 2px solid var(--azul);
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
   transform: rotate(45deg);
   transition: transform .15s ease;
   pointer-events: none;
@@ -225,16 +231,17 @@ h1, h2, h3, h4 {
   border-radius: 10px;
   font-size: .94rem;
   white-space: nowrap;
+  color: var(--azul);
 }
 
 .hamburguer {
   display: none;
   background: none;
-  border: 2px solid var(--azul);
+  border: 2px solid #fff;
   border-radius: 10px;
   padding: 7px 10px;
   cursor: pointer;
-  color: var(--azul);
+  color: #fff;
   font-size: 1.15rem;
   line-height: 1;
 }
@@ -727,7 +734,7 @@ h1, h2, h3, h4 {
     display: none;
   }
   .menu.aberto { display: flex; }
-  .menu a { text-align: center; }
+  .menu a { text-align: center; color: var(--azul); }
   .hamburguer { display: block; }
 
   .menu-dropdown-linha { justify-content: space-between; }
