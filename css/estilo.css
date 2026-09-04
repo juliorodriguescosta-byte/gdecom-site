@@ -227,12 +227,16 @@ h1, h2, h3, h4 {
   transform: rotate(225deg);
 }
 .submenu a {
-  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
   border-radius: 10px;
   font-size: .94rem;
   white-space: nowrap;
   color: var(--azul);
 }
+.icone-programa { width: 30px; height: 30px; flex: none; border-radius: 9px; }
 
 .hamburguer {
   display: none;
