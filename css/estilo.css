@@ -344,6 +344,24 @@ h1, h2, h3, h4 {
 .historia-longa ul { margin: 0 0 18px 1.2rem; }
 .historia-longa li { margin-bottom: 6px; }
 
+/* ---------- hero das páginas de programa (SCFV, Maior Cuidado, Creche, AEI, Qualificação) ---------- */
+.hero-programa { padding-bottom: 26px; }
+.hero-programa-grid { display: flex; align-items: center; gap: 44px; flex-wrap: wrap; }
+.hero-programa-texto { flex: 1 1 380px; }
+.hero-programa-titulo { font-size: clamp(2.2rem, 4.6vw, 3.3rem); margin: 16px 0 14px; }
+.hero-programa-lead { font-size: 1.14rem; }
+.hero-programa-logo-wrap { flex: 0 0 auto; margin: 0 auto; }
+.hero-programa-logo { border: 6px solid #fff; box-shadow: var(--sombra); }
+.hero-programa-logo--circular { width: 220px; height: 220px; border-radius: 50%; }
+.hero-programa-logo--retangular { width: min(320px, 80vw); height: auto; border-radius: var(--raio); }
+.hero-programa-logo--fundo-branco { background: #fff; }
+.hero-programa-logo--contido { object-fit: contain; }
+.secao-programa { padding-top: 20px; }
+.subtitulo-secao { font-size: 1.4rem; margin: 8px 0 10px; }
+.subtitulo-secao--espacado { margin-top: 28px; }
+.mt-56 { margin-top: 56px; }
+.mt-28 { margin-top: 28px; }
+
 /* ---------- aviso de conteúdo em construção ---------- */
 .aviso-conteudo {
   max-width: 46rem;
@@ -427,6 +445,13 @@ h1, h2, h3, h4 {
   color: var(--azul);
 }
 .card .icone svg { width: 28px; height: 28px; }
+.card .icone-ilustrado {
+  width: 88px;
+  height: 88px;
+  border-radius: 0;
+  background: none;
+}
+.card .icone-ilustrado svg { width: 100%; height: 100%; display: block; }
 .card h3 { font-size: 1.28rem; }
 .card p { font-size: .98rem; }
 .card .link-seta { margin-top: auto; font-weight: 800; color: var(--azul-vivo); }
@@ -593,6 +618,10 @@ h1, h2, h3, h4 {
   border: 4px solid #fff;
   background: #fff;
 }
+.galeria figure:focus-visible {
+  outline: 3px solid var(--amarelo);
+  outline-offset: 2px;
+}
 .galeria img { aspect-ratio: 1/1.1; object-fit: cover; width: 100%; transition: transform .3s ease; }
 .galeria figure:hover img { transform: scale(1.05); }
 .galeria figcaption {
@@ -616,6 +645,26 @@ h1, h2, h3, h4 {
 }
 .luz.aberta { display: grid; }
 .luz img { max-height: 88vh; max-width: 92vw; border-radius: 14px; border: 6px solid #fff; }
+.luz-fechar {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  color: var(--azul);
+  font-size: 1.7rem;
+  line-height: 1;
+  font-weight: 700;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  z-index: 101;
+}
+.luz-fechar:hover { background: var(--amarelo); }
+.luz-fechar:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 2px; }
 
 /* ---------- faixa CTA amarela ---------- */
 .faixa {

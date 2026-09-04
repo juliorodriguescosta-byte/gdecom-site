@@ -37,19 +37,49 @@
   }, { threshold: 0.12 });
   document.querySelectorAll(".surgir").forEach(function (el) { observador.observe(el); });
 
-  // galeria: lightbox simples
+  // galeria: lightbox acessível (mouse, toque, teclado e leitor de tela)
   var luz = document.querySelector(".luz");
   if (luz) {
     var luzImg = luz.querySelector("img");
+    var luzFechar = luz.querySelector(".luz-fechar");
+    var luzUltimoFoco = null;
+
+    var abrirLuz = function (fig) {
+      var imgOriginal = fig.querySelector("img");
+      luzUltimoFoco = fig;
+      luzImg.src = imgOriginal.src;
+      luzImg.alt = imgOriginal.alt || "Imagem ampliada da galeria";
+      luz.classList.add("aberta");
+      if (luzFechar) luzFechar.focus();
+    };
+    var fecharLuz = function () {
+      if (!luz.classList.contains("aberta")) return;
+      luz.classList.remove("aberta");
+      if (luzUltimoFoco) { luzUltimoFoco.focus(); luzUltimoFoco = null; }
+    };
+
     document.querySelectorAll(".galeria figure").forEach(function (fig) {
-      fig.addEventListener("click", function () {
-        luzImg.src = fig.querySelector("img").src;
-        luz.classList.add("aberta");
+      fig.setAttribute("tabindex", "0");
+      fig.setAttribute("role", "button");
+      var legenda = fig.querySelector("figcaption");
+      fig.setAttribute("aria-label", "Ampliar imagem" + (legenda ? ": " + legenda.textContent.trim() : ""));
+      fig.addEventListener("click", function () { abrirLuz(fig); });
+      fig.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+          e.preventDefault();
+          abrirLuz(fig);
+        }
       });
     });
-    luz.addEventListener("click", function () { luz.classList.remove("aberta"); });
+
+    // clique em qualquer ponto do overlay (incluindo a imagem e o botão fechar) fecha — comportamento original preservado
+    luz.addEventListener("click", fecharLuz);
+    // mantém o foco dentro do diálogo enquanto ele está aberto (só há um controle focável: fechar)
+    luz.addEventListener("keydown", function (e) {
+      if (e.key === "Tab") { e.preventDefault(); if (luzFechar) luzFechar.focus(); }
+    });
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") luz.classList.remove("aberta");
+      if (e.key === "Escape") fecharLuz();
     });
   }
 

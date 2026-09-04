@@ -5,13 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Qualificação Profissional · GDECOM — Grupo de Desenvolvimento Comunitário</title>
   <meta name="description" content="Qualificação Profissional do GDECOM: cursos gratuitos de qualificação para ampliar o acesso ao trabalho e à renda, em Belo Horizonte.">
+  <link rel="canonical" href="https://www.gdecom.org.br/qualificacao-profissional.html">
+  <meta name="theme-color" content="#06357e">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook / Instagram -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://www.gdecom.org.br/qualificacao-profissional.html">
+  <meta property="og:site_name" content="GDECOM">
+  <meta property="og:title" content="Qualificação Profissional · GDECOM — Grupo de Desenvolvimento Comunitário">
+  <meta property="og:description" content="Qualificação Profissional do GDECOM: cursos gratuitos de qualificação para ampliar o acesso ao trabalho e à renda, em Belo Horizonte.">
+  <meta property="og:image" content="https://www.gdecom.org.br/assets/img/qp-formandos.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Qualificação Profissional · GDECOM — Grupo de Desenvolvimento Comunitário">
+  <meta name="twitter:description" content="Qualificação Profissional do GDECOM: cursos gratuitos de qualificação para ampliar o acesso ao trabalho e à renda, em Belo Horizonte.">
+  <meta name="twitter:image" content="https://www.gdecom.org.br/assets/img/qp-formandos.jpg">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
+
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="topo">
     <div class="topo-inner">
@@ -44,15 +65,15 @@
     </div>
   </header>
 
-  <main>
-    <section class="hero" style="padding-bottom:26px;">
+  <main id="conteudo">
+    <section class="hero hero-programa">
       <div class="container">
         <div class="secao-cabeca surgir">
           <span class="pill">Programas · GDECOM</span>
-          <h1 style="font-size:clamp(2.2rem,4.6vw,3.3rem); margin:16px 0 14px;">
+          <h1 class="hero-programa-titulo">
             Qualificação <span class="mancha">Profissional</span>
           </h1>
-          <p style="font-size:1.14rem;">
+          <p class="hero-programa-lead">
             Cursos gratuitos de qualificação para ampliar o acesso da comunidade
             ao trabalho e à renda, em parceria com o poder público.
           </p>
@@ -60,7 +81,7 @@
       </div>
     </section>
 
-    <section class="secao" style="padding-top:20px;">
+    <section class="secao secao-programa">
       <div class="container">
         <div class="historia-longa surgir">
           <p>
@@ -76,7 +97,7 @@
           </ul>
         </div>
 
-        <div class="secao-cabeca centro surgir" style="margin-top:56px;">
+        <div class="secao-cabeca centro surgir mt-56">
           <span class="pill">Nossas turmas</span>
           <h2>Formando <span class="mancha">novas oportunidades</span></h2>
           <p>Registros das turmas e cursos de qualificação profissional. Clique em qualquer imagem para ampliar.</p>
@@ -122,7 +143,10 @@
     </section>
   </main>
 
-  <div class="luz" role="dialog" aria-label="Imagem ampliada"><img src="" alt="Imagem ampliada da galeria"></div>
+  <div class="luz" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+    <button class="luz-fechar" type="button" aria-label="Fechar imagem ampliada">&times;</button>
+    <img src="" alt="Imagem ampliada da galeria">
+  </div>
 
   <footer class="rodape">
     <div class="container">

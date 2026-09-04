@@ -5,13 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SCFV — Serviço de Convivência e Fortalecimento de Vínculos · GDECOM</title>
   <meta name="description" content="SCFV no GDECOM: Serviço de Convivência e Fortalecimento de Vínculos, em parceria com a Prefeitura de Belo Horizonte, no âmbito do SUAS.">
+  <link rel="canonical" href="https://www.gdecom.org.br/scfv.html">
+  <meta name="theme-color" content="#06357e">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook / Instagram -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://www.gdecom.org.br/scfv.html">
+  <meta property="og:site_name" content="GDECOM">
+  <meta property="og:title" content="SCFV — Serviço de Convivência e Fortalecimento de Vínculos · GDECOM">
+  <meta property="og:description" content="SCFV no GDECOM: Serviço de Convivência e Fortalecimento de Vínculos, em parceria com a Prefeitura de Belo Horizonte, no âmbito do SUAS.">
+  <meta property="og:image" content="https://www.gdecom.org.br/assets/img/scfv-carnaval-taquaril.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SCFV — Serviço de Convivência e Fortalecimento de Vínculos · GDECOM">
+  <meta name="twitter:description" content="SCFV no GDECOM: Serviço de Convivência e Fortalecimento de Vínculos, em parceria com a Prefeitura de Belo Horizonte, no âmbito do SUAS.">
+  <meta name="twitter:image" content="https://www.gdecom.org.br/assets/img/scfv-carnaval-taquaril.jpg">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
+
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="topo">
     <div class="topo-inner">
@@ -44,27 +65,27 @@
     </div>
   </header>
 
-  <main>
-    <section class="hero" style="padding-bottom:26px;">
-      <div class="container" style="display:flex; align-items:center; gap:44px; flex-wrap:wrap;">
-        <div class="secao-cabeca surgir" style="flex:1 1 380px;">
+  <main id="conteudo">
+    <section class="hero hero-programa">
+      <div class="container hero-programa-grid">
+        <div class="secao-cabeca surgir hero-programa-texto">
           <span class="pill">Programas · GDECOM</span>
-          <h1 style="font-size:clamp(2.2rem,4.6vw,3.3rem); margin:16px 0 14px;">
+          <h1 class="hero-programa-titulo">
             SCFV — Serviço de Convivência e <span class="mancha">Fortalecimento de Vínculos</span>
           </h1>
-          <p style="font-size:1.14rem;">
+          <p class="hero-programa-lead">
             No GDECOM, acreditamos que fortalecer vínculos é fortalecer vidas. O
             SCFV reúne grupos de convivência que trabalham o pertencimento, a
             autoestima e os laços entre pessoas, famílias e território.
           </p>
         </div>
-        <div class="surgir" style="flex:0 0 auto; margin:0 auto;">
-          <img src="assets/img/scfv-logo.jpg" alt="Logotipo do Tá Rolando PJ — SCFV 15 a 17 anos" width="220" height="220" style="width:220px; height:220px; border-radius:50%; border:6px solid #fff; box-shadow:var(--sombra); background:#fff; object-fit:contain;">
+        <div class="surgir hero-programa-logo-wrap">
+          <img src="assets/img/scfv-logo.jpg" alt="Logotipo do Tá Rolando PJ — SCFV 15 a 17 anos" width="220" height="220" class="hero-programa-logo hero-programa-logo--circular hero-programa-logo--fundo-branco hero-programa-logo--contido">
         </div>
       </div>
     </section>
 
-    <section class="secao" style="padding-top:20px;">
+    <section class="secao secao-programa">
       <div class="container">
         <div class="historia-longa surgir">
           <p>
@@ -89,7 +110,7 @@
           </ul>
         </div>
 
-        <div class="secao-cabeca centro surgir" style="margin-top:56px;">
+        <div class="secao-cabeca centro surgir mt-56">
           <span class="pill">Dia a dia</span>
           <h2>Um pouco do <span class="mancha">SCFV</span></h2>
           <p>Registros das atividades do SCFV. Clique em qualquer imagem para ampliar.</p>
@@ -112,7 +133,7 @@
             <figcaption>Coordenadora Soraya Veiga</figcaption>
           </figure>
         </div>
-        <div class="centro" style="margin-top:28px;">
+        <div class="centro mt-28">
           <a class="btn btn-amarelo" href="https://www.instagram.com/tarolandopj/" target="_blank" rel="noopener">
             Ver mais no Instagram @tarolandopj
           </a>
@@ -132,7 +153,10 @@
     </section>
   </main>
 
-  <div class="luz" role="dialog" aria-label="Imagem ampliada"><img src="" alt="Imagem ampliada da galeria"></div>
+  <div class="luz" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+    <button class="luz-fechar" type="button" aria-label="Fechar imagem ampliada">&times;</button>
+    <img src="" alt="Imagem ampliada da galeria">
+  </div>
 
   <footer class="rodape">
     <div class="container">
