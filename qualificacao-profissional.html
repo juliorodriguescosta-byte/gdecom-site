@@ -30,7 +30,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body>
+<body class="pagina-programa pagina-qualificacao">
 
   <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
@@ -39,8 +39,8 @@
       <a class="topo-logo" href="index.html" aria-label="GDECOM — página inicial">
         <img src="assets/img/logo.png" alt="GDECOM — Grupo de Desenvolvimento Comunitário">
       </a>
-      <button class="hamburguer" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
-      <nav class="menu" aria-label="Menu principal">
+      <button class="hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">&#9776;</button>
+      <nav class="menu" id="menu-principal" aria-label="Menu principal">
         <a href="index.html">Início</a>
         <a href="quem-somos.html">Quem somos</a>
         <a href="o-que-fazemos.html">O que fazemos</a>
@@ -53,11 +53,11 @@
             </button>
           </div>
           <div class="submenu">
-            <a href="qualificacao-profissional.html" class="ativo"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="#f2c200"/><circle cx="32" cy="46" r="3.4" fill="#06357e"/><circle cx="68" cy="46" r="3.4" fill="#06357e"/><path d="M40 46v-9a10 10 0 0 1 20 0v9" fill="none" stroke="#06357e" stroke-width="6" stroke-linecap="round"/><rect x="22" y="46" width="56" height="32" rx="7" fill="#06357e"/><rect x="43" y="57" width="14" height="9" rx="2" fill="#f2c200"/></svg>Qualificação Profissional</a>
-            <a href="scfv.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="#2fb6a5"/><circle cx="30" cy="54" r="13" fill="#e8b48a"/><circle cx="50" cy="44" r="15" fill="#7a4b2e"/><circle cx="70" cy="54" r="13" fill="#f0c9a0"/><path d="M23 66q7 8 14 0M43 58q7 8 14 0M63 66q7 8 14 0" fill="none" stroke="#052a63" stroke-width="3" stroke-linecap="round"/></svg>SCFV — Serviço de Convivência e Fortalecimento de Vínculos</a>
-            <a href="maior-cuidado.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="#ff8a5c"/><path d="M50 70C30 55 22 42 32 32c7-7 15-4 18 3 3-7 11-10 18-3 10 10 2 23-18 38z" fill="#ffffff"/><polygon points="50,38 57,45 43,45" fill="#052a63"/><rect x="44" y="45" width="12" height="10" fill="#052a63"/></svg>Maior Cuidado</a>
-            <a href="creche-patati-patata.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="#e85d75"/><circle cx="30" cy="34" r="10" fill="#fff3cc"/><circle cx="70" cy="34" r="10" fill="#fff3cc"/><circle cx="50" cy="56" r="27" fill="#fff3cc"/><circle cx="41" cy="53" r="3.2" fill="#052a63"/><circle cx="59" cy="53" r="3.2" fill="#052a63"/><circle cx="50" cy="61" r="4" fill="#c98a5b"/><path d="M42 68q8 6 16 0" fill="none" stroke="#052a63" stroke-width="3" stroke-linecap="round"/></svg>Creche Patati-Patatá</a>
-            <a href="atendimento-educacional-integrado.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="#0a4db5"/><path d="M20 32L50 27V72L20 77Z" fill="#ffffff"/><path d="M80 32L50 27V72L80 77Z" fill="#eef4fb"/><line x1="50" y1="27" x2="50" y2="72" stroke="#052a63" stroke-width="2"/><rect x="33" y="60" width="34" height="7" rx="3.5" fill="#f2c200" stroke="#052a63" stroke-width="2" transform="rotate(-16 50 63)"/></svg>Atendimento Educacional Integrado</a>
+            <a href="qualificacao-profissional.html" class="ativo"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="var(--amarelo)"/><circle cx="32" cy="46" r="3.4" fill="var(--azul)"/><circle cx="68" cy="46" r="3.4" fill="var(--azul)"/><path d="M40 46v-9a10 10 0 0 1 20 0v9" fill="none" stroke="var(--azul)" stroke-width="6" stroke-linecap="round"/><rect x="22" y="46" width="56" height="32" rx="7" fill="var(--azul)"/><rect x="43" y="57" width="14" height="9" rx="2" fill="var(--amarelo)"/></svg>Qualificação Profissional</a>
+            <a href="scfv.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="var(--programa-scfv)"/><circle cx="30" cy="54" r="13" fill="#e8b48a"/><circle cx="50" cy="44" r="15" fill="#7a4b2e"/><circle cx="70" cy="54" r="13" fill="#f0c9a0"/><path d="M23 66q7 8 14 0M43 58q7 8 14 0M63 66q7 8 14 0" fill="none" stroke="var(--azul-profundo)" stroke-width="3" stroke-linecap="round"/></svg>SCFV — Serviço de Convivência e Fortalecimento de Vínculos</a>
+            <a href="maior-cuidado.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="var(--programa-maior-cuidado)"/><path d="M50 70C30 55 22 42 32 32c7-7 15-4 18 3 3-7 11-10 18-3 10 10 2 23-18 38z" fill="var(--branco)"/><polygon points="50,38 57,45 43,45" fill="var(--azul-profundo)"/><rect x="44" y="45" width="12" height="10" fill="var(--azul-profundo)"/></svg>Maior Cuidado</a>
+            <a href="creche-patati-patata.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="var(--programa-creche)"/><circle cx="30" cy="34" r="10" fill="var(--amarelo-suave)"/><circle cx="70" cy="34" r="10" fill="var(--amarelo-suave)"/><circle cx="50" cy="56" r="27" fill="var(--amarelo-suave)"/><circle cx="41" cy="53" r="3.2" fill="var(--azul-profundo)"/><circle cx="59" cy="53" r="3.2" fill="var(--azul-profundo)"/><circle cx="50" cy="61" r="4" fill="#c98a5b"/><path d="M42 68q8 6 16 0" fill="none" stroke="var(--azul-profundo)" stroke-width="3" stroke-linecap="round"/></svg>Creche Patati-Patatá</a>
+            <a href="atendimento-educacional-integrado.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="var(--azul-vivo)"/><path d="M20 32L50 27V72L20 77Z" fill="var(--branco)"/><path d="M80 32L50 27V72L80 77Z" fill="#eef4fb"/><line x1="50" y1="27" x2="50" y2="72" stroke="var(--azul-profundo)" stroke-width="2"/><rect x="33" y="60" width="34" height="7" rx="3.5" fill="var(--amarelo)" stroke="var(--azul-profundo)" stroke-width="2" transform="rotate(-16 50 63)"/></svg>Atendimento Educacional Integrado</a>
           </div>
         </div>
         <a href="contato.html" class="menu-cta">Fale com a gente</a>
@@ -68,7 +68,7 @@
   <main id="conteudo">
     <section class="hero hero-programa">
       <div class="container">
-        <div class="secao-cabeca surgir">
+        <div class="secao-cabeca surgir hero-programa-texto">
           <span class="pill">Programas · GDECOM</span>
           <h1 class="hero-programa-titulo">
             Qualificação <span class="mancha">Profissional</span>
@@ -77,6 +77,9 @@
             Cursos gratuitos de qualificação para ampliar o acesso da comunidade
             ao trabalho e à renda, em parceria com o poder público.
           </p>
+          <div class="hero-acoes">
+            <a class="btn btn-amarelo" href="contato.html">Falar com o GDECOM</a>
+          </div>
         </div>
       </div>
     </section>
@@ -89,6 +92,17 @@
             gratuitos de qualificação profissional, ampliando o acesso da
             comunidade ao mercado de trabalho e fortalecendo a autonomia e a
             inclusão produtiva.
+          </p>
+          <p>
+            Os cursos são voltados, prioritariamente, para pessoas em situação
+            de vulnerabilidade social, com o objetivo de contribuir para o
+            desenvolvimento de conhecimentos, habilidades e competências que
+            ampliem as possibilidades de inserção no mundo do trabalho e de
+            geração de renda. As formações ofertadas contemplam diferentes
+            áreas de atuação, especialmente aquelas relacionadas aos setores
+            de serviços, beleza e tecnologia, buscando dialogar com as
+            demandas do mercado de trabalho e com os interesses dos
+            participantes.
           </p>
           <ul>
             <li>Cursos gratuitos em diversas áreas, como beleza e estética;</li>
@@ -130,12 +144,27 @@
         </div>
       </div>
     </section>
+    <!-- OUTROS PROGRAMAS -->
+    <section class="secao secao-gelo">
+      <div class="container">
+        <div class="secao-cabeca centro surgir">
+          <span class="pill">Conheça também</span>
+          <h2>Outros <span class="mancha">programas</span> do GDECOM</h2>
+        </div>
+        <div class="chips-programas surgir">
+          <a class="chip-programa" href="scfv.html"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="var(--programa-scfv)"/><circle cx="30" cy="54" r="13" fill="#e8b48a"/><circle cx="50" cy="44" r="15" fill="#7a4b2e"/><circle cx="70" cy="54" r="13" fill="#f0c9a0"/><path d="M23 66q7 8 14 0M43 58q7 8 14 0M63 66q7 8 14 0" fill="none" stroke="var(--azul-profundo)" stroke-width="3" stroke-linecap="round"/></svg>SCFV</a>
+          <a class="chip-programa" href="maior-cuidado.html"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="var(--programa-maior-cuidado)"/><path d="M50 70C30 55 22 42 32 32c7-7 15-4 18 3 3-7 11-10 18-3 10 10 2 23-18 38z" fill="var(--branco)"/><polygon points="50,38 57,45 43,45" fill="var(--azul-profundo)"/><rect x="44" y="45" width="12" height="10" fill="var(--azul-profundo)"/></svg>Maior Cuidado</a>
+          <a class="chip-programa" href="creche-patati-patata.html"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="var(--programa-creche)"/><circle cx="30" cy="34" r="10" fill="var(--amarelo-suave)"/><circle cx="70" cy="34" r="10" fill="var(--amarelo-suave)"/><circle cx="50" cy="56" r="27" fill="var(--amarelo-suave)"/><circle cx="41" cy="53" r="3.2" fill="var(--azul-profundo)"/><circle cx="59" cy="53" r="3.2" fill="var(--azul-profundo)"/><circle cx="50" cy="61" r="4" fill="#c98a5b"/><path d="M42 68q8 6 16 0" fill="none" stroke="var(--azul-profundo)" stroke-width="3" stroke-linecap="round"/></svg>Creche Patati-Patatá</a>
+          <a class="chip-programa" href="atendimento-educacional-integrado.html"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="var(--azul-vivo)"/><path d="M20 32L50 27V72L20 77Z" fill="var(--branco)"/><path d="M80 32L50 27V72L80 77Z" fill="#eef4fb"/><line x1="50" y1="27" x2="50" y2="72" stroke="var(--azul-profundo)" stroke-width="2"/><rect x="33" y="60" width="34" height="7" rx="3.5" fill="var(--amarelo)" stroke="var(--azul-profundo)" stroke-width="2" transform="rotate(-16 50 63)"/></svg>Atendimento Educacional Integrado</a>
+        </div>
+      </div>
+    </section>
 
     <!-- FAIXA CTA -->
     <section class="faixa">
       <div class="container faixa-inner surgir">
-        <h2>Quer saber mais sobre este projeto?</h2>
-        <p>Fale com a nossa equipe e tire suas dúvidas sobre inscrição, turmas e parcerias.</p>
+        <h2>Quer saber sobre os cursos gratuitos?</h2>
+        <p>Fale com a nossa equipe para saber mais sobre as turmas, inscrições e vagas disponíveis.</p>
         <a class="btn btn-azul" href="contato.html">Falar com o GDECOM</a>
         &nbsp;
         <a class="btn btn-branco" href="projetos.html">Ver todos os projetos</a>
@@ -173,7 +202,7 @@
             <li>Belo Horizonte / MG — CEP 31260-480</li>
             <li>Tel.: (31) 3497-7255</li>
             <li><a href="mailto:gdecom@gdecom.org.br">gdecom@gdecom.org.br</a></li>
-            <li><a href="https://www.instagram.com/gdecom/" target="_blank" rel="noopener">@gdecom</a></li>
+            <li><a href="https://www.instagram.com/gdecom/" target="_blank" rel="noopener noreferrer">@gdecom</a></li>
           </ul>
         </div>
       </div>

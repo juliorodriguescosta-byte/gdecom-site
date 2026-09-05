@@ -39,8 +39,8 @@
       <a class="topo-logo" href="index.html" aria-label="GDECOM — página inicial">
         <img src="assets/img/logo.png" alt="GDECOM — Grupo de Desenvolvimento Comunitário">
       </a>
-      <button class="hamburguer" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
-      <nav class="menu" aria-label="Menu principal">
+      <button class="hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">&#9776;</button>
+      <nav class="menu" id="menu-principal" aria-label="Menu principal">
         <a href="index.html">Início</a>
         <a href="quem-somos.html">Quem somos</a>
         <a href="o-que-fazemos.html" class="ativo">O que fazemos</a>
@@ -53,11 +53,11 @@
             </button>
           </div>
           <div class="submenu">
-            <a href="qualificacao-profissional.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="#f2c200"/><circle cx="32" cy="46" r="3.4" fill="#06357e"/><circle cx="68" cy="46" r="3.4" fill="#06357e"/><path d="M40 46v-9a10 10 0 0 1 20 0v9" fill="none" stroke="#06357e" stroke-width="6" stroke-linecap="round"/><rect x="22" y="46" width="56" height="32" rx="7" fill="#06357e"/><rect x="43" y="57" width="14" height="9" rx="2" fill="#f2c200"/></svg>Qualificação Profissional</a>
-            <a href="scfv.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="#2fb6a5"/><circle cx="30" cy="54" r="13" fill="#e8b48a"/><circle cx="50" cy="44" r="15" fill="#7a4b2e"/><circle cx="70" cy="54" r="13" fill="#f0c9a0"/><path d="M23 66q7 8 14 0M43 58q7 8 14 0M63 66q7 8 14 0" fill="none" stroke="#052a63" stroke-width="3" stroke-linecap="round"/></svg>SCFV — Serviço de Convivência e Fortalecimento de Vínculos</a>
-            <a href="maior-cuidado.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="#ff8a5c"/><path d="M50 70C30 55 22 42 32 32c7-7 15-4 18 3 3-7 11-10 18-3 10 10 2 23-18 38z" fill="#ffffff"/><polygon points="50,38 57,45 43,45" fill="#052a63"/><rect x="44" y="45" width="12" height="10" fill="#052a63"/></svg>Maior Cuidado</a>
-            <a href="creche-patati-patata.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="#e85d75"/><circle cx="30" cy="34" r="10" fill="#fff3cc"/><circle cx="70" cy="34" r="10" fill="#fff3cc"/><circle cx="50" cy="56" r="27" fill="#fff3cc"/><circle cx="41" cy="53" r="3.2" fill="#052a63"/><circle cx="59" cy="53" r="3.2" fill="#052a63"/><circle cx="50" cy="61" r="4" fill="#c98a5b"/><path d="M42 68q8 6 16 0" fill="none" stroke="#052a63" stroke-width="3" stroke-linecap="round"/></svg>Creche Patati-Patatá</a>
-            <a href="atendimento-educacional-integrado.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="#0a4db5"/><path d="M20 32L50 27V72L20 77Z" fill="#ffffff"/><path d="M80 32L50 27V72L80 77Z" fill="#eef4fb"/><line x1="50" y1="27" x2="50" y2="72" stroke="#052a63" stroke-width="2"/><rect x="33" y="60" width="34" height="7" rx="3.5" fill="#f2c200" stroke="#052a63" stroke-width="2" transform="rotate(-16 50 63)"/></svg>Atendimento Educacional Integrado</a>
+            <a href="qualificacao-profissional.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="var(--amarelo)"/><circle cx="32" cy="46" r="3.4" fill="var(--azul)"/><circle cx="68" cy="46" r="3.4" fill="var(--azul)"/><path d="M40 46v-9a10 10 0 0 1 20 0v9" fill="none" stroke="var(--azul)" stroke-width="6" stroke-linecap="round"/><rect x="22" y="46" width="56" height="32" rx="7" fill="var(--azul)"/><rect x="43" y="57" width="14" height="9" rx="2" fill="var(--amarelo)"/></svg>Qualificação Profissional</a>
+            <a href="scfv.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="var(--programa-scfv)"/><circle cx="30" cy="54" r="13" fill="#e8b48a"/><circle cx="50" cy="44" r="15" fill="#7a4b2e"/><circle cx="70" cy="54" r="13" fill="#f0c9a0"/><path d="M23 66q7 8 14 0M43 58q7 8 14 0M63 66q7 8 14 0" fill="none" stroke="var(--azul-profundo)" stroke-width="3" stroke-linecap="round"/></svg>SCFV — Serviço de Convivência e Fortalecimento de Vínculos</a>
+            <a href="maior-cuidado.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="var(--programa-maior-cuidado)"/><path d="M50 70C30 55 22 42 32 32c7-7 15-4 18 3 3-7 11-10 18-3 10 10 2 23-18 38z" fill="var(--branco)"/><polygon points="50,38 57,45 43,45" fill="var(--azul-profundo)"/><rect x="44" y="45" width="12" height="10" fill="var(--azul-profundo)"/></svg>Maior Cuidado</a>
+            <a href="creche-patati-patata.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="var(--programa-creche)"/><circle cx="30" cy="34" r="10" fill="var(--amarelo-suave)"/><circle cx="70" cy="34" r="10" fill="var(--amarelo-suave)"/><circle cx="50" cy="56" r="27" fill="var(--amarelo-suave)"/><circle cx="41" cy="53" r="3.2" fill="var(--azul-profundo)"/><circle cx="59" cy="53" r="3.2" fill="var(--azul-profundo)"/><circle cx="50" cy="61" r="4" fill="#c98a5b"/><path d="M42 68q8 6 16 0" fill="none" stroke="var(--azul-profundo)" stroke-width="3" stroke-linecap="round"/></svg>Creche Patati-Patatá</a>
+            <a href="atendimento-educacional-integrado.html"><svg class="icone-programa" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="26" fill="var(--azul-vivo)"/><path d="M20 32L50 27V72L20 77Z" fill="var(--branco)"/><path d="M80 32L50 27V72L80 77Z" fill="#eef4fb"/><line x1="50" y1="27" x2="50" y2="72" stroke="var(--azul-profundo)" stroke-width="2"/><rect x="33" y="60" width="34" height="7" rx="3.5" fill="var(--amarelo)" stroke="var(--azul-profundo)" stroke-width="2" transform="rotate(-16 50 63)"/></svg>Atendimento Educacional Integrado</a>
           </div>
         </div>
         <a href="contato.html" class="menu-cta">Fale com a gente</a>
@@ -67,11 +67,11 @@
 
   <main id="conteudo">
     <!-- HERO INSTITUCIONAL -->
-    <section class="hero" style="padding-bottom:26px;">
+    <section class="hero hero-programa">
       <div class="container hero-grid">
         <div class="hero-texto surgir">
           <span class="pill">O que fazemos</span>
-          <h1 style="font-size:clamp(2.2rem,4.6vw,3.3rem); margin:16px 0 14px;">
+          <h1 class="hero-programa-titulo">
             Assistência social que <span class="mancha">chega até você</span>
           </h1>
           <p class="grande">
@@ -217,7 +217,7 @@
 
         <!-- QUALIFICACAO -->
         <article class="programa surgir" id="qualificacao">
-          <div style="grid-column:1/-1;">
+          <div class="historia-longa" style="grid-column:1/-1;">
             <span class="tag-programa">TRABALHO E RENDA</span>
             <h3>Qualificação profissional</h3>
             <p>
@@ -271,7 +271,7 @@
             <span class="tag-programa">CULTURA</span>
             <h3>Verso Vivo</h3>
             <p>
-              Projeto cultural do GDECOM que aproxima a comunidade da palavra e da
+              Iniciativa cultural do GDECOM que aproxima a comunidade da palavra e da
               expressão artística, dando voz e protagonismo a quem participa.
             </p>
             <ul>
@@ -307,13 +307,12 @@
         </article>
 
         <!-- OUTRAS INICIATIVAS -->
-        <div class="cards" style="max-width:420px; margin:56px auto 0;">
-          <article class="card surgir">
-            <div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 21v-6h6v6"/></svg></div>
-            <h3>Casa de Acolhimento Institucional</h3>
-            <p>A Casa dos Anjos acolhe adolescentes do sexo masculino de 12 a 18
-               anos, em parceria com a rede de proteção de Belo Horizonte.</p>
-          </article>
+        <div class="valor surgir" style="max-width:420px; margin:56px auto 0;">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 21v-6h6v6"/></svg> Casa de Acolhimento Institucional</h3>
+          <p>A Casa dos Anjos é uma UAI (Unidade de Acolhimento Institucional)
+             implantada em 2014, que acolhe adolescentes do sexo masculino de 12
+             a 18 anos em parceria com a rede de proteção de Belo Horizonte —
+             parceria que se mantém até a presente data.</p>
         </div>
       </div>
     </section>
@@ -378,7 +377,7 @@
             <li>Belo Horizonte / MG — CEP 31260-480</li>
             <li>Tel.: (31) 3497-7255</li>
             <li><a href="mailto:gdecom@gdecom.org.br">gdecom@gdecom.org.br</a></li>
-            <li><a href="https://www.instagram.com/gdecom/" target="_blank" rel="noopener">@gdecom</a></li>
+            <li><a href="https://www.instagram.com/gdecom/" target="_blank" rel="noopener noreferrer">@gdecom</a></li>
           </ul>
         </div>
       </div>

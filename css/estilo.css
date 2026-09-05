@@ -19,6 +19,13 @@
   --branco: #ffffff;
   --sombra: 0 12px 32px -14px rgba(6, 53, 126, 0.25);
   --raio: 22px;
+
+  /* cores de identidade por programa — usadas nos ícones do menu "Programas".
+     Qualificação e AEI já reaproveitam as cores de marca acima; só SCFV,
+     Maior Cuidado e Creche precisam de um tom próprio. */
+  --programa-scfv: #2fb6a5;
+  --programa-maior-cuidado: #ff8a5c;
+  --programa-creche: #e85d75;
   --fonte-display: "Baloo 2", "Nunito", sans-serif;
   --fonte-texto: "Nunito", "Trebuchet MS", sans-serif;
 }
@@ -92,6 +99,10 @@ h1, h2, h3, h4 {
   text-decoration: none !important;
 }
 .btn:hover { transform: translateY(-2px); }
+.btn:focus-visible {
+  outline: 3px solid var(--amarelo);
+  outline-offset: 3px;
+}
 .btn-amarelo { background: var(--amarelo); color: var(--azul); box-shadow: var(--sombra); }
 .btn-amarelo:hover { background: #ffd21a; }
 .btn-azul { background: var(--azul); color: #fff; }
@@ -156,6 +167,10 @@ h1, h2, h3, h4 {
   align-items: center;
 }
 .topo-logo img { height: 54px; width: auto; }
+.topo-logo:focus-visible {
+  outline: 3px solid var(--amarelo);
+  outline-offset: 3px;
+}
 .menu { display: flex; align-items: center; gap: 6px; }
 .menu a {
   font-family: var(--fonte-display);
@@ -168,6 +183,11 @@ h1, h2, h3, h4 {
   transition: background .15s ease, color .15s ease;
 }
 .menu a:hover { background: var(--amarelo-suave); color: var(--azul); text-decoration: none; }
+.menu a:focus-visible,
+.submenu-toggle:focus-visible {
+  outline: 3px solid var(--amarelo);
+  outline-offset: 2px;
+}
 .menu a.ativo { background: var(--amarelo); color: var(--azul); }
 .menu .menu-cta { background: var(--amarelo); color: var(--azul); margin-left: 6px; }
 .menu .menu-cta:hover { background: #ffd21a; }
@@ -249,26 +269,53 @@ h1, h2, h3, h4 {
   font-size: 1.15rem;
   line-height: 1;
 }
+.hamburguer:focus-visible {
+  outline: 3px solid var(--amarelo);
+  outline-offset: 2px;
+}
 
 /* ============================================================
    HERO
    ============================================================ */
-.hero { position: relative; padding: 72px 0 88px; overflow: hidden; }
+.hero { position: relative; padding: 64px 0 72px; overflow: hidden; }
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
   align-items: center;
 }
-.hero h1 { font-size: clamp(2.4rem, 5vw, 3.7rem); margin: 18px 0 20px; }
-.hero p.grande { font-size: 1.16rem; max-width: 34rem; color: var(--tinta); }
+.hero h1 { font-size: clamp(1.9rem, 6.4vw, 3.7rem); margin: 18px 0 20px; }
+.hero p.grande { font-size: 1.16rem; max-width: 38rem; color: var(--tinta); }
 .hero-acoes { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
 
-/* texto do hero centralizado */
+/* texto do hero: centralizado em telas estreitas (empilhado) */
 .hero-texto { text-align: center; display: flex; flex-direction: column; align-items: center; }
 .hero-texto .pill { margin-inline: auto; }
 .hero-texto p.grande { margin-left: auto; margin-right: auto; }
 .hero-texto .hero-acoes { justify-content: center; }
+
+/* ---------- tablet: ainda empilhado, mas com respiro e alinhamento à esquerda ---------- */
+@media (min-width: 700px) {
+  .hero-texto {
+    text-align: left;
+    align-items: flex-start;
+  }
+  .hero-texto .pill { margin-inline: 0; }
+  .hero-texto p.grande { margin-left: 0; margin-right: 0; }
+  .hero-texto .hero-acoes { justify-content: flex-start; }
+}
+
+/* ---------- desktop: composição em duas colunas ---------- */
+@media (min-width: 1024px) {
+  .hero { padding: 84px 0 96px; }
+  .hero-grid {
+    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+    gap: clamp(2.5rem, 5vw, 5.5rem);
+  }
+  .hero-texto { max-width: 46rem; }
+  .hero-foto-banner { max-width: none; }
+  .telhado-riscado { top: -6px; right: auto; left: 58%; width: 300px; opacity: .4; }
+}
 
 .hero-foto {
   position: relative;
@@ -277,9 +324,6 @@ h1, h2, h3, h4 {
   display: flex;
   justify-content: center;
 }
-/* bolha amarela decorativa removida a pedido — a foto mantém o contorno orgânico própria dela */
-.hero-foto .blob { display: none; }
-
 .hero-foto img {
   position: relative;
   z-index: 1;
@@ -294,51 +338,18 @@ h1, h2, h3, h4 {
 }
 
 /* banner largo do hero (imagem panorâmica, sem a moldura orgânica) */
-.hero-foto-banner { max-width: 1040px; }
+.hero-foto-banner { width: 100%; max-width: 1040px; }
 .hero-foto-banner img {
   height: auto;
   aspect-ratio: 16 / 9;
   border-radius: var(--raio);
 }
-.estrela-solta {
-  position: absolute;
-  z-index: 2;
-  width: 54px;
-  filter: drop-shadow(0 6px 10px rgba(6,53,126,.25));
-  animation: flutuar 5s ease-in-out infinite;
-}
-@keyframes flutuar {
-  0%, 100% { transform: translateY(0) rotate(-8deg); }
-  50% { transform: translateY(-12px) rotate(6deg); }
-}
-
-/* ---------- você sabia (destaque de texto) ---------- */
-.secao-voce-sabia { padding: 0 0 78px; }
-.voce-sabia-caixa {
-  max-width: 720px;
-  margin: 0 auto;
-  text-align: center;
-  background: var(--azul);
-  border: 3px solid var(--amarelo);
-  border-radius: 32px;
-  padding: 36px 40px;
-  box-shadow: var(--sombra);
-}
-.voce-sabia-caixa .pill-clara {
-  background: var(--amarelo);
-  border-color: var(--amarelo);
-}
-.voce-sabia-caixa p {
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.12rem;
-  line-height: 1.55;
-  margin: 18px 0 0;
-}
-
 /* ---------- história completa (texto longo) ---------- */
 .historia-longa { max-width: 760px; margin: 0 auto; }
 .historia-longa h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-bottom: 22px; }
+/* subtítulos de seção continuam no tamanho de subtítulo mesmo quando precisam
+   ser <h2> por hierarquia semântica (ex.: maior-cuidado.html, aei.html) */
+.historia-longa h2.subtitulo-secao { font-size: 1.4rem; margin-bottom: 10px; }
 .historia-longa p { margin-bottom: 18px; }
 .historia-longa p:last-child { margin-bottom: 0; }
 .historia-longa ul { margin: 0 0 18px 1.2rem; }
@@ -361,6 +372,57 @@ h1, h2, h3, h4 {
 .subtitulo-secao--espacado { margin-top: 28px; }
 .mt-56 { margin-top: 56px; }
 .mt-28 { margin-top: 28px; }
+.hero-programa-texto .hero-acoes { margin-top: 22px; }
+
+/* ---------- assinatura visual por programa ----------
+   cada página de programa recebe uma classe .pagina-<programa> no <body>,
+   que define --accent a partir da cor de identidade já usada no ícone
+   do programa no menu "Programas". Aplicado com moderação: só a borda
+   do selo, do quadro do logotipo e do selo da galeria mudam de cor —
+   o resto da página continua no azul/amarelo padrão do GDECOM. */
+.pagina-scfv { --accent: var(--programa-scfv); }
+.pagina-maior-cuidado { --accent: var(--programa-maior-cuidado); }
+.pagina-creche { --accent: var(--programa-creche); }
+.pagina-aei { --accent: var(--azul-vivo); }
+.pagina-qualificacao { --accent: var(--amarelo); }
+.pagina-programa .hero-programa .pill,
+.pagina-programa .secao-programa .pill {
+  /* só a borda muda de cor — o texto permanece no azul padrão do .pill
+     para preservar o contraste AA (a cor de destaque, em vários programas,
+     não tem contraste suficiente sobre o fundo claro do selo). */
+  border-color: var(--accent, var(--amarelo));
+}
+.pagina-programa .hero-programa-logo { border-color: var(--accent, #fff); }
+
+/* ---------- outros programas (navegação relacionada) ---------- */
+.chips-programas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.chip-programa {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 2px solid #e4ecf4;
+  border-radius: 999px;
+  padding: 8px 20px 8px 8px;
+  font-family: var(--fonte-display);
+  font-weight: 800;
+  font-size: .96rem;
+  color: var(--azul);
+  transition: border-color .2s ease, transform .2s ease;
+}
+.chip-programa:hover,
+.chip-programa:focus-visible {
+  border-color: var(--amarelo);
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+.chip-programa:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 2px; }
+.chip-programa svg { width: 34px; height: 34px; flex: none; }
 
 /* ---------- aviso de conteúdo em construção ---------- */
 .aviso-conteudo {
@@ -426,25 +488,36 @@ h1, h2, h3, h4 {
 .card {
   background: #fff;
   border-radius: var(--raio);
-  padding: 30px 26px;
-  border: 2px solid #e4ecf4;
-  box-shadow: 0 6px 20px -12px rgba(6,53,126,.18);
-  transition: transform .2s ease, border-color .2s ease;
+  padding: 32px 28px;
+  border: 1px solid #e4ecf4;
+  box-shadow: 0 1px 2px rgba(6,53,126,.05);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
-.card:hover { transform: translateY(-6px); border-color: var(--amarelo); }
+.cards .card:hover,
+.cards .card:focus-within {
+  transform: translateY(-4px);
+  border-color: var(--amarelo);
+  box-shadow: 0 16px 28px -18px rgba(6,53,126,.28);
+}
 .card .icone {
-  width: 58px;
-  height: 58px;
-  border-radius: 45% 55% 50% 50% / 55% 45% 55% 45%;
-  background: var(--amarelo);
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: var(--amarelo-suave);
   display: grid;
   place-items: center;
   color: var(--azul);
+  transition: background .2s ease, color .2s ease;
 }
-.card .icone svg { width: 28px; height: 28px; }
+.cards .card:hover .icone,
+.cards .card:focus-within .icone {
+  background: var(--azul);
+  color: var(--amarelo);
+}
+.card .icone svg { width: 27px; height: 27px; }
 .card .icone-ilustrado {
   width: 88px;
   height: 88px;
@@ -455,6 +528,11 @@ h1, h2, h3, h4 {
 .card h3 { font-size: 1.28rem; }
 .card p { font-size: .98rem; }
 .card .link-seta { margin-top: auto; font-weight: 800; color: var(--azul-vivo); }
+.link-seta:focus-visible {
+  outline: 3px solid var(--amarelo);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
 
 /* ---------- mídia lado a lado ---------- */
 .duo {
@@ -473,6 +551,8 @@ h1, h2, h3, h4 {
   object-fit: cover;
   aspect-ratio: 4 / 4.4;
 }
+/* variante para fotos de origem já panorâmica (evita recorte apertado demais) */
+.duo-foto--panoramica img { aspect-ratio: 4 / 3.4; object-position: 72% 30%; }
 .duo-foto .selo {
   position: absolute;
   bottom: -18px;
@@ -527,32 +607,6 @@ h1, h2, h3, h4 {
   z-index: 1;
 }
 
-/* ---------- linha do tempo ---------- */
-.tempo { list-style: none; position: relative; padding-left: 34px; }
-.tempo::before {
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: 6px;
-  bottom: 6px;
-  width: 4px;
-  border-radius: 4px;
-  background: var(--amarelo);
-}
-.tempo li { position: relative; padding: 0 0 30px 16px; }
-.tempo li::before {
-  content: "";
-  position: absolute;
-  left: -32px;
-  top: 6px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: var(--azul);
-  border: 4px solid var(--amarelo);
-}
-.tempo strong { font-family: var(--fonte-display); color: var(--azul); font-size: 1.12rem; display: block; }
-
 /* ---------- valores ---------- */
 .valores { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
 .valor {
@@ -590,22 +644,6 @@ h1, h2, h3, h4 {
 .programa ul { margin: 14px 0 0 1.1rem; }
 .programa li { margin-bottom: 6px; }
 .divisor-programas { border: none; border-top: 3px dashed var(--telhado); margin: 64px 0; }
-
-/* ---------- SCFV: galeria de peças gráficas ---------- */
-.scfv-galeria {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-top: 36px;
-}
-.scfv-galeria img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--raio);
-  border: 5px solid #fff;
-  box-shadow: var(--sombra);
-}
 
 /* ---------- galeria ---------- */
 .galeria { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
@@ -688,7 +726,7 @@ h1, h2, h3, h4 {
 .faixa p { color: var(--azul-profundo); font-weight: 700; font-size: 1.1rem; max-width: 40rem; margin: 0 auto 26px; }
 
 /* ---------- contato ---------- */
-.contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; }
 .contato-cards { display: grid; gap: 16px; }
 .contato-card {
   display: flex;
@@ -735,6 +773,10 @@ h1, h2, h3, h4 {
 .rodape-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
 .rodape h4 { color: var(--amarelo); font-size: 1.05rem; margin-bottom: 14px; }
 .rodape a { color: #fff; }
+.rodape a:focus-visible {
+  outline: 3px solid var(--amarelo);
+  outline-offset: 2px;
+}
 .rodape ul { list-style: none; display: grid; gap: 8px; }
 .rodape-logo {
   background: #fff;
@@ -759,17 +801,21 @@ h1, h2, h3, h4 {
 .surgir.visivel { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   .surgir { opacity: 1; transform: none; transition: none; }
-  .estrela-solta { animation: none; }
   html { scroll-behavior: auto; }
+  .card, .card .icone { transition: none; }
+  .cards .card:hover, .cards .card:focus-within { transform: none; }
+  .chip-programa { transition: none; }
+  .chip-programa:hover, .chip-programa:focus-visible { transform: none; }
+  .btn { transition: none; }
+  .btn:hover { transform: none; }
 }
 
 /* ============================================================
    RESPONSIVO
    ============================================================ */
 @media (max-width: 900px) {
-  .hero-grid, .duo, .programa, .contato-grid { grid-template-columns: 1fr; }
+  .duo, .programa, .contato-grid { grid-template-columns: 1fr; }
   .duo.invertido .duo-foto, .programa.par .programa-foto { order: 0; }
-  .scfv-galeria { grid-template-columns: 1fr; gap: 18px; }
   .numeros { grid-template-columns: repeat(2, 1fr); }
   .rodape-grid { grid-template-columns: 1fr; }
   .hero { padding: 46px 0 64px; }
@@ -806,7 +852,6 @@ h1, h2, h3, h4 {
   .submenu a { text-align: center; }
 }
 @media (max-width: 520px) {
-  .numeros { grid-template-columns: 1fr 1fr; }
   .citacao { padding: 36px 26px; }
   body { font-size: 16px; }
 }
