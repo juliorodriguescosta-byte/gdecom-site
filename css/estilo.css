@@ -314,7 +314,7 @@ h1, h2, h3, h4 {
   }
   .hero-texto { max-width: 46rem; }
   .hero-foto-banner { max-width: none; }
-  .telhado-riscado { top: -6px; right: auto; left: 58%; width: 300px; opacity: .4; }
+  .telhado-riscado { top: 16px; right: auto; left: 60%; width: 260px; opacity: .2; }
 }
 
 .hero-foto {
@@ -441,7 +441,7 @@ h1, h2, h3, h4 {
   top: 34px;
   right: -60px;
   width: 340px;
-  opacity: .5;
+  opacity: .32;
   z-index: 0;
 }
 
@@ -854,4 +854,157 @@ h1, h2, h3, h4 {
 @media (max-width: 520px) {
   .citacao { padding: 36px 26px; }
   body { font-size: 16px; }
+}
+
+/* ============================================================
+   HOMEPAGE — VISUAL REFINEMENT PASS 1 (escopo: .pagina-inicial)
+   Todas as regras abaixo, salvo indicação contrária, só afetam
+   index.html. Nada aqui altera .pill, .btn, .cards, .card ou o
+   cabeçalho nas outras 10 páginas. Aprovado como teste visual;
+   nada foi commitado.
+   ============================================================ */
+
+/* ---------- H1: eyebrow "Desde 1980" mais discreto (marcador
+   institucional, não um segundo botão) ---------- */
+.pill--discreto {
+  background: transparent;
+  border: none;
+  border-left: 3px solid var(--amarelo);
+  border-radius: 0;
+  padding: 4px 0 4px 14px;
+  font-size: .78rem;
+  letter-spacing: .08em;
+}
+.pill--discreto svg { width: 13px; height: 13px; }
+
+/* ---------- ritmo vertical: transição do herói para os números
+   um pouco mais conectada, sem apertar o herói em si (só o
+   espaçamento inferior muda; o respiro interno permanece) ---------- */
+.pagina-inicial .hero { padding-bottom: 52px; }
+
+/* ---------- cabeçalho: logo com mais presença, sem redesenhar a arte ---------- */
+.pagina-inicial .topo-inner { padding: 16px 24px; }
+.pagina-inicial .topo-logo { padding: 6px 16px; }
+.pagina-inicial .topo-logo img { height: 60px; }
+
+/* ---------- botões do herói e da faixa CTA: raio mais contido
+   (teste local — não propagado ao .btn global ainda) ---------- */
+.pagina-inicial .hero-acoes .btn,
+.pagina-inicial .faixa .btn {
+  border-radius: 12px;
+}
+
+/* ---------- foto real no herói (substitui a ilustração nesta página) ---------- */
+.pagina-inicial .hero-foto-banner img {
+  object-fit: cover;
+  border: 6px solid #fff;
+  box-shadow: var(--sombra);
+}
+
+/* ---------- hierarquia tipográfica: h1 continua no peso mais forte;
+   h2/h3 da home ficam um degrau mais calmos ---------- */
+.pagina-inicial h2,
+.pagina-inicial h3 {
+  font-weight: 700;
+}
+
+/* ---------- números (1980 · 4 · 45+ · 100%): de cartões pesados
+   para uma linha editorial de prova institucional ---------- */
+.numeros { gap: 0; }
+.numero-card {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 4px 24px;
+  position: relative;
+}
+.numero-card + .numero-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: rgba(6, 53, 126, .15);
+}
+.numero-card strong {
+  font-weight: 700;
+  font-size: clamp(2.5rem, 4vw, 3.3rem);
+  position: relative;
+}
+.numero-card strong::after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 3px;
+  background: var(--amarelo);
+  margin: 14px auto 0;
+  border-radius: 2px;
+}
+.numero-card span {
+  display: block;
+  margin-top: 14px;
+  max-width: 18ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 900px) {
+  .numero-card::before { display: none; }
+  .numero-card:nth-child(3),
+  .numero-card:nth-child(4) {
+    border-top: 1px solid rgba(6, 53, 126, .15);
+    padding-top: 24px;
+  }
+}
+
+/* ---------- "Conheça nossos programas": lista editorial,
+   deliberadamente diferente da grade de cards de "Áreas de atuação" ---------- */
+.programas-lista {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #e4ecf4;
+}
+.programa-linha {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 20px 6px;
+  border-bottom: 1px solid #e4ecf4;
+  border-radius: 12px;
+  transition: background .2s ease;
+}
+.programa-linha:hover,
+.programa-linha:focus-within {
+  background: var(--gelo);
+}
+.programa-linha-icone {
+  width: 56px;
+  height: 56px;
+  flex: none;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.programa-linha-icone svg { width: 100%; height: 100%; display: block; }
+.programa-linha-texto { flex: 1 1 auto; min-width: 0; }
+.programa-linha-texto h3 { font-size: 1.12rem; margin-bottom: 4px; }
+.programa-linha-texto p { font-size: .95rem; color: var(--tinta); margin: 0; }
+.programa-linha-link {
+  flex: none;
+  font-family: var(--fonte-display);
+  font-weight: 800;
+  color: var(--azul-vivo);
+  white-space: nowrap;
+  padding: 8px 6px;
+}
+.programa-linha-link:focus-visible {
+  outline: 3px solid var(--amarelo);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+@media (max-width: 640px) {
+  .programa-linha { flex-wrap: wrap; gap: 12px 16px; }
+  .programa-linha-texto { flex: 1 1 100%; order: 2; }
+  .programa-linha-icone { order: 1; }
+  .programa-linha-link { order: 3; flex: 1 1 100%; }
 }
