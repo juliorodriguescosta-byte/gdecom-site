@@ -52,6 +52,11 @@ h1, h2, h3, h4 {
   line-height: 1.12;
   font-weight: 800;
 }
+/* hierarquia calma: h1 continua no peso mais forte; h2/h3 um degrau
+   mais discretos em todo o site (mesmo valor já aprovado na home) */
+h2, h3 {
+  font-weight: 700;
+}
 
 .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 
@@ -91,7 +96,7 @@ h1, h2, h3, h4 {
   font-family: var(--fonte-display);
   font-weight: 700;
   font-size: 1.02rem;
-  border-radius: 999px;
+  border-radius: 12px;
   padding: 13px 28px;
   border: 3px solid transparent;
   cursor: pointer;
@@ -162,11 +167,11 @@ h1, h2, h3, h4 {
 .topo-logo {
   background: #fff;
   border-radius: 12px;
-  padding: 4px 12px;
+  padding: 6px 16px;
   display: inline-flex;
   align-items: center;
 }
-.topo-logo img { height: 54px; width: auto; }
+.topo-logo img { height: 60px; width: auto; }
 .topo-logo:focus-visible {
   outline: 3px solid var(--amarelo);
   outline-offset: 3px;
@@ -854,6 +859,36 @@ h1, h2, h3, h4 {
 @media (max-width: 520px) {
   .citacao { padding: 36px 26px; }
   body { font-size: 16px; }
+}
+
+/* ---------- Maior Cuidado (piloto): logo do programa mais compacto no
+   mobile — reduz o espaço vertical entre o herói e a foto documental,
+   sem alterar o desktop nem as demais páginas de programa.
+   Escopo: .pagina-maior-cuidado (só esta página). ---------- */
+@media (max-width: 520px) {
+  .pagina-maior-cuidado .hero-programa-grid { gap: 20px; }
+  .pagina-maior-cuidado .hero-programa-logo--retangular { width: min(190px, 55vw); }
+}
+
+/* ---------- SCFV: mesmo ajuste de compacidade no mobile, adaptado ao
+   selo circular (que tem tamanho fixo de 220px e não encolhe sozinho
+   em telas estreitas). Escopo: .pagina-scfv (só esta página). ---------- */
+@media (max-width: 520px) {
+  .pagina-scfv .hero-programa-grid { gap: 20px; }
+  .pagina-scfv .hero-programa-logo--circular { width: 150px; height: 150px; }
+}
+
+/* ---------- Creche Patati-Patatá: mesmo ajuste, mesmo motivo. ---------- */
+@media (max-width: 520px) {
+  .pagina-creche .hero-programa-grid { gap: 20px; }
+  .pagina-creche .hero-programa-logo--circular { width: 150px; height: 150px; }
+}
+
+/* ---------- Atendimento Educacional Integrado: mesmo ajuste; selo um
+   pouco maior que os demais por ter três linhas de texto no desenho. ---------- */
+@media (max-width: 520px) {
+  .pagina-aei .hero-programa-grid { gap: 20px; }
+  .pagina-aei .hero-programa-logo--circular { width: 165px; height: 165px; }
 }
 
 /* ============================================================
